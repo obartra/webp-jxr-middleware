@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
 [![API Doc](https://doclets.io/obartra/webp-jxr-middleware/master.svg)](https://doclets.io/obartra/webp-jxr-middleware/master)
-[![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg)](https://coveralls.io/github/obartra/webp-jxr-middleware)
+[![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg?branch=master)](https://coveralls.io/github/obartra/webp-jxr-middleware?branch=master)
 [![Dependencies](https://david-dm.org/obartra/webp-jxr-middleware/status.svg)](https://david-dm.org/obartra/webp-jxr-middleware)
 [![DevDependencies](https://david-dm.org/obartra/webp-jxr-middleware/dev-status.svg)](https://david-dm.org/obartra/webp-jxr-middleware?type=dev)
 ## Installation
@@ -29,17 +29,21 @@ app.use(express.static(serverPath));
 
 An ES5 compatibility build is also included at `lib/es5.js`. To generate it from the source, run `npm run build`.
 
-You can require it like:
+You can then require it like:
 
 ```javascript
-import rewriteImg from 'webp-jxr-middleware/lib/es5';
+var rewriteImg = require('webp-jxr-middleware/lib/es5').default;
 ```
+
+## Generating Optimized Images (WebP and JXR)
+
+If you want improve your site's performance by serving optimized images but don't know how to get started, check out this [guide](https://github.com/obartra/notes/blob/master/imageOptimization/README.md).
 
 ## Overview
 
-Middleware to serve JXR and WEBP images when the browser supports them. Works with [Connect](https://github.com/senchalabs/connect/) and [Express](https://github.com/expressjs/express).
+Middleware to serve `jxr` and `WebP` images when the browser supports them. Works with [Connect](https://github.com/senchalabs/connect/) and [Express](https://github.com/expressjs/express).
 
-It is  based off [connect-image-optimus](https://github.com/msemenistyi/connect-image-optimus) and [accept-webp](https://github.com/JoshuaWise/accept-webp). It maintains support for webp and jxr from the `connect-image-optimus` and avoids the UA parsing like `accept-webp`.
+It is  based off [connect-image-optimus](https://github.com/msemenistyi/connect-image-optimus) and [accept-webp](https://github.com/JoshuaWise/accept-webp). It maintains support for `webp` and `jxr` from the `connect-image-optimus` and avoids the UA parsing like `accept-webp`.
 
 ## Development Setup
 
