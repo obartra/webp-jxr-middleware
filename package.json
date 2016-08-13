@@ -1,0 +1,39 @@
+{
+  "name": "webp-jxr-middleware",
+  "version": "1.0.0",
+  "description": "Express middleware to replace jpg/png/jpeg with webp/jxr when supported",
+  "main": "webp-jxr-middleware.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obartra/webp-jxr-middleware.git"
+  },
+  "keywords": [
+    "webp",
+    "jxr",
+    "express",
+    "connect",
+    "middleware",
+    "image"
+  ],
+  "author": "Oscar Bartra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/obartra/webp-jxr-middleware/issues"
+  },
+  "homepage": "https://github.com/obartra/webp-jxr-middleware#readme",
+  "dependencies": {
+    "vary": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "express": "^4.14.0"
+  }
+}
