@@ -1,11 +1,10 @@
 machine:
   node:
     version: 6.3.1
-  environment:
 general:
   artifacts:
-    - "webp-jxr-middleware.js"
-    - "webp-jxr-middleware.es5.js"
+    - "lib/index.js"
+    - "lib/es5.js"
 dependencies:
   override:
     - npm install
@@ -13,8 +12,8 @@ test:
   override:
     - npm run docs
     - npm run lint
-    - npm run es5
-    - npm run test
+    - npm run build
+    - npm run test-coveralls
 deployment:
   publish:
     owner: obartra

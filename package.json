@@ -1,15 +1,16 @@
 {
   "name": "webp-jxr-middleware",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Express middleware to replace jpg/png/jpeg with webp/jxr when supported",
-  "main": "webp-jxr-middleware.js",
+  "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run es5",
-    "test": "./node_modules/.bin/babel-node  ./node_modules/.bin/babel-istanbul cover test/*.spec.js | tap-summary",
+    "prepublish": "npm run build",
+    "test": "./node_modules/.bin/babel-node  ./node_modules/.bin/babel-istanbul cover test/*.spec.js | tap-dot",
+    "test-coveralls": "npm test -- && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "dev": "DEBUG=express:* ./node_modules/.bin/babel-node src/dev",
     "lint": "./node_modules/.bin/eslint src/*.js test/*.js",
     "docs": " ./node_modules/.bin/jsdoc --pedantic -c .jsdoc src --readme README.md",
-    "es5": "./node_modules/.bin/babel src/index.js --out-file webp-jxr-middleware.es5.js"
+    "build": "bash build.sh"
   },
   "commitMsg": {
     "bodyMaxLineLength": {
@@ -36,7 +37,7 @@
     "npm run docs",
     "npm run lint",
     "npm run test",
-    "npm run es5"
+    "npm run build"
   ],
   "repository": {
     "type": "git",
@@ -44,8 +45,9 @@
   },
   "files": [
     "README.md",
-    "webp-jxr-middleware.js",
-    "webp-jxr-middleware.es5.js"
+    "lib/index.js",
+    "lib/es5.js",
+    "npm-shrinkwrap.json"
   ],
   "keywords": [
     "webp",
@@ -69,6 +71,7 @@
     "babel-istanbul": "^0.11.0",
     "babel-preset-es2015": "^6.13.2",
     "blue-tape": "^0.2.0",
+    "coveralls": "^2.11.12",
     "cz-conventional-changelog": "^1.1.7",
     "eslint": "^3.3.0",
     "eslint-config-airbnb": "^10.0.1",
@@ -79,6 +82,6 @@
     "precommit": "^1.2.2",
     "supertest": "^2.0.0",
     "supertest-as-promised": "^4.0.0",
-    "tap-summary": "^3.0.1"
+    "tap-dot": "^1.0.5"
   }
 }

@@ -2,7 +2,7 @@ import test from 'blue-tape';
 import { join } from 'path';
 import express from 'express';
 import request from 'supertest-as-promised';
-import { rewriteImageRequestMiddleware } from '../src/index';
+import rewriteImageRequestMiddleware from '../src/index';
 
 const app = express();
 const path = join(__dirname, '../assets');

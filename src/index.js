@@ -149,14 +149,4 @@ function rewriteImageRequestMiddleware(dirname) {
 	};
 }
 
-module.exports = {
-	_private: {
-		isImageSupported,
-		isAcceptedMethod,
-		canRequestWebp,
-		canRequestJxr,
-		isFile,
-		updateRequestUrl
-	},
-	rewriteImageRequestMiddleware
-};
+export default rewriteImageRequestMiddleware;

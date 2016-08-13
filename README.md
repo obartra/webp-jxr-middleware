@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
 [![API Doc](https://doclets.io/obartra/webp-jxr-middleware/master.svg)](https://doclets.io/obartra/webp-jxr-middleware/master)
+[![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg)](https://coveralls.io/github/obartra/webp-jxr-middleware)
 [![Dependencies](https://david-dm.org/obartra/webp-jxr-middleware/status.svg)](https://david-dm.org/obartra/webp-jxr-middleware)
 [![DevDependencies](https://david-dm.org/obartra/webp-jxr-middleware/dev-status.svg)](https://david-dm.org/obartra/webp-jxr-middleware?type=dev)
 ## Installation
@@ -13,8 +14,8 @@ npm install webp-jxr-middleware
 webp-jxr-middleware should be used before any middleware that is serving files (e.g. `express.static`) so that it serves changed format file.
 
 ```javascript
-import * as rewriteImg from 'webp-jxr-middleware';
-import * as express from 'express';
+import rewriteImg from 'webp-jxr-middleware';
+import express from 'express';
 import { join } from 'path';
 
 const app = express();
@@ -26,7 +27,13 @@ app.use(express.static(serverPath));
 
 ## ES5
 
-An ES5 compatibility build is also included as `webp-jxr-middleware.es5`. To generate it from the source, run `npm run es5`.
+An ES5 compatibility build is also included at `lib/es5.js`. To generate it from the source, run `npm run build`.
+
+You can require it like:
+
+```javascript
+import rewriteImg from 'webp-jxr-middleware/lib/es5';
+```
 
 ## Overview
 
