@@ -24,6 +24,10 @@ app.use(rewriteImg(serverPath));
 app.use(express.static(serverPath));
 ```
 
+## ES5
+
+An ES5 compatibility build is also included as `webp-jxr-middleware.es5`. To generate it from the source, run `npm run es5`.
+
 ## Overview
 
 Middleware to serve JXR and WEBP images when the browser supports them. Works with [Connect](https://github.com/senchalabs/connect/) and [Express](https://github.com/expressjs/express).
@@ -35,6 +39,7 @@ It is  based off [connect-image-optimus](https://github.com/msemenistyi/connect-
 1. Fork the repo
 2. Run `npm install`
 3. Run `./node_modules/.bin/precommit install`
+4. Run `npm run dev` to initiate the development server
 
 ## Contributing
 
