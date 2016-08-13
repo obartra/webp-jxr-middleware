@@ -1,6 +1,6 @@
 {
   "name": "webp-jxr-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Express middleware to replace jpg/png/jpeg with webp/jxr when supported",
   "main": "webp-jxr-middleware.js",
   "scripts": {
