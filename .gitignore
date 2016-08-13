@@ -2,4 +2,6 @@ logs
 *.log
 npm-debug.log*
 coverage
+docs
 node_modules
+webp-jxr-middleware.es5.js

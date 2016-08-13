@@ -1,0 +1,24 @@
+machine:
+  node:
+    version: 6.3.1
+  environment:
+general:
+  artifacts:
+    - "webp-jxr-middleware.js"
+    - "webp-jxr-middleware.es5.js"
+dependencies:
+  override:
+    - npm install
+test:
+  override:
+    - npm run docs
+    - npm run lint
+    - npm run es5
+    - npm run test
+deployment:
+  publish:
+    owner: obartra
+    branch: master
+    commands:
+      - echo "//registry.npmjs.org/:_authToken=$NPM_REPO_TOKEN" >> ~/.npmrc
+      - npm publish || exit 0

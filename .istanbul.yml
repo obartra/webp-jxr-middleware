@@ -1,0 +1,13 @@
+instrumentation:
+    root: .
+    default-excludes: true
+    excludes: [
+        "assets/**",
+        "licenses/**",
+        "test/**"
+    ]
+reporting:
+    print: summary
+    reports:
+        - lcov
+    dir: ./coverage

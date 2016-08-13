@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
+
 ## Installation
 
 ```shell
@@ -6,7 +8,7 @@ npm install webp-jxr-middleware
 
 ## Usage
 
-**Warning**: image-optimus should be used before a middleware that is serving files so that it serves changed format file.
+webp-jxr-middleware should be used before a middleware that is serving files so that it serves changed format file.
 
 ```javascript
 import * as rewriteImg from 'webp-jxr-middleware';
@@ -25,3 +27,18 @@ app.use(express.static(serverPath));
 Middleware to serve JXR and WEBP images when the browser supports them. Works with [Connect](https://github.com/senchalabs/connect/) and [Express](https://github.com/expressjs/express).
 
 It is  based off [connect-image-optimus](https://github.com/msemenistyi/connect-image-optimus) and [accept-webp](https://github.com/JoshuaWise/accept-webp). It maintains support for webp and jxr.
+
+## Contributing
+
+PRs welcome!
+
+1. Fork the repo
+2. Run `npm install`
+3. Run `./node_modules/.bin/precommit install`
+4. Commit your changes following [conventional-changelog format](https://github.com/conventional-changelog/conventional-changelog)
+5. Push to a new branch (e.g. `git push origin my-awesome-feature`)
+6. Create a new Pull Request
+
+## License
+
+MIT
