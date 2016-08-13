@@ -1,6 +1,6 @@
 {
   "name": "webp-jxr-middleware",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Express middleware to replace jpg/png/jpeg with webp/jxr when supported",
   "main": "lib/index.js",
   "scripts": {
@@ -46,8 +46,7 @@
   "files": [
     "README.md",
     "lib/index.js",
-    "lib/es5.js",
-    "npm-shrinkwrap.json"
+    "lib/es5.js"
   ],
   "keywords": [
     "webp",
@@ -62,7 +61,7 @@
   "bugs": {
     "url": "https://github.com/obartra/webp-jxr-middleware/issues"
   },
-  "homepage": "https://github.com/obartra/webp-jxr-middleware#readme",
+  "homepage": " http://obartra.github.io/webp-jxr-middleware",
   "dependencies": {
     "vary": "^1.1.0"
   },

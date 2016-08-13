@@ -130,7 +130,7 @@ function updateRequestUrl(pathname, dirname, extension, request, response, callb
  * @public
  * @since 1.0.0
  */
-function rewriteImageRequestMiddleware(dirname) {
+export default function rewriteImageRequestMiddleware(dirname) {
 	return function rewriteImageRequest(request, response, next) {
 		if (!isAcceptedMethod(request.method)) {
 			next();
@@ -148,5 +148,3 @@ function rewriteImageRequestMiddleware(dirname) {
 		}
 	};
 }
-
-export default rewriteImageRequestMiddleware;

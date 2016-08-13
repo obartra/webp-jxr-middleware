@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
 [![API Doc](https://doclets.io/obartra/webp-jxr-middleware/master.svg)](https://doclets.io/obartra/webp-jxr-middleware/master)
-[![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg)](https://coveralls.io/github/obartra/webp-jxr-middleware)
+[![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg?branch=master)](https://coveralls.io/github/obartra/webp-jxr-middleware?branch=master)
 [![Dependencies](https://david-dm.org/obartra/webp-jxr-middleware/status.svg)](https://david-dm.org/obartra/webp-jxr-middleware)
 [![DevDependencies](https://david-dm.org/obartra/webp-jxr-middleware/dev-status.svg)](https://david-dm.org/obartra/webp-jxr-middleware?type=dev)
 ## Installation
@@ -29,10 +29,10 @@ app.use(express.static(serverPath));
 
 An ES5 compatibility build is also included at `lib/es5.js`. To generate it from the source, run `npm run build`.
 
-You can require it like:
+You can then require it like:
 
 ```javascript
-import rewriteImg from 'webp-jxr-middleware/lib/es5';
+var rewriteImg = require('webp-jxr-middleware/lib/es5').default;
 ```
 
 ## Overview
