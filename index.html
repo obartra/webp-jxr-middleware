@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Webp-jxr-middleware</h1>
-        <p>Express middleware to replace jpg/png/jpeg with webp/jxr when supported</p>
+        <p>Express middleware to replace jpg/png/jpeg with webp/jxr</p>
 
         <p class="view"><a href="https://github.com/obartra/webp-jxr-middleware">View the Project on GitHub <small>obartra/webp-jxr-middleware</small></a></p>
 
@@ -28,9 +28,9 @@
         </ul>
       </header>
       <section>
-        <p><a href="https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master"><img src="https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg" alt="CircleCI"></a>
+        <p><a href="https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master"><img src="https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=shield" alt="CircleCI"></a>
 <a href="https://doclets.io/obartra/webp-jxr-middleware/master"><img src="https://doclets.io/obartra/webp-jxr-middleware/master.svg" alt="API Doc"></a>
-<a href="https://coveralls.io/github/obartra/webp-jxr-middleware"><img src="https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg" alt="Coverage Status"></a>
+<a href="https://coveralls.io/github/obartra/webp-jxr-middleware?branch=master"><img src="https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg?branch=master" alt="Coverage Status"></a>
 <a href="https://david-dm.org/obartra/webp-jxr-middleware"><img src="https://david-dm.org/obartra/webp-jxr-middleware/status.svg" alt="Dependencies"></a>
 <a href="https://david-dm.org/obartra/webp-jxr-middleware?type=dev"><img src="https://david-dm.org/obartra/webp-jxr-middleware/dev-status.svg" alt="DevDependencies"></a></p>
 
@@ -59,16 +59,21 @@
 
 <p>An ES5 compatibility build is also included at <code>lib/es5.js</code>. To generate it from the source, run <code>npm run build</code>.</p>
 
-<p>You can require it like:</p>
+<p>You can then require it like:</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">rewriteImg</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>webp-jxr-middleware/lib/es5<span class="pl-pds">'</span></span>;</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> rewriteImg <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>webp-jxr-middleware/lib/es5<span class="pl-pds">'</span></span>).<span class="pl-smi">default</span>;</pre></div>
+
+<h2>
+<a id="generating-optimized-images-webp-and-jxr" class="anchor" href="#generating-optimized-images-webp-and-jxr" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generating Optimized Images (WebP and JXR)</h2>
+
+<p>If you want improve your site's performance by serving optimized images but don't know how to get started, check out this <a href="https://github.com/obartra/notes/blob/master/imageOptimization/README.md">guide</a>.</p>
 
 <h2>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
 
-<p>Middleware to serve JXR and WEBP images when the browser supports them. Works with <a href="https://github.com/senchalabs/connect/">Connect</a> and <a href="https://github.com/expressjs/express">Express</a>.</p>
+<p>Middleware to serve <code>jxr</code> and <code>WebP</code> images when the browser supports them. Works with <a href="https://github.com/senchalabs/connect/">Connect</a> and <a href="https://github.com/expressjs/express">Express</a>.</p>
 
-<p>It is  based off <a href="https://github.com/msemenistyi/connect-image-optimus">connect-image-optimus</a> and <a href="https://github.com/JoshuaWise/accept-webp">accept-webp</a>. It maintains support for webp and jxr from the <code>connect-image-optimus</code> and avoids the UA parsing like <code>accept-webp</code>.</p>
+<p>It is  based off <a href="https://github.com/msemenistyi/connect-image-optimus">connect-image-optimus</a> and <a href="https://github.com/JoshuaWise/accept-webp">accept-webp</a>. It maintains support for <code>webp</code> and <code>jxr</code> from the <code>connect-image-optimus</code> and avoids the UA parsing like <code>accept-webp</code>.</p>
 
 <h2>
 <a id="development-setup" class="anchor" href="#development-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development Setup</h2>
@@ -86,7 +91,7 @@
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
 
 <ol>
-<li>Commit your changes following <a href="https://github.com/conventional-changelog/conventional-changelog">conventional-changelog format</a>
+<li>Commit your changes with <code>npm run commit</code>
 </li>
 <li>Push to a new branch (e.g. <code>git push origin my-awesome-feature</code>)</li>
 <li>Create a new Pull Request</li>
