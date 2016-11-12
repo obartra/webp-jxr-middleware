@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=svg)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
+[![CircleCI](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/webp-jxr-middleware/tree/master)
 [![API Doc](https://doclets.io/obartra/webp-jxr-middleware/master.svg)](https://doclets.io/obartra/webp-jxr-middleware/master)
 [![Coverage Status](https://coveralls.io/repos/github/obartra/webp-jxr-middleware/badge.svg?branch=master)](https://coveralls.io/github/obartra/webp-jxr-middleware?branch=master)
 [![Dependencies](https://david-dm.org/obartra/webp-jxr-middleware/status.svg)](https://david-dm.org/obartra/webp-jxr-middleware)
@@ -54,7 +54,7 @@ It is  based off [connect-image-optimus](https://github.com/msemenistyi/connect-
 
 ## Contributing
 
-1. Commit your changes following [conventional-changelog format](https://github.com/conventional-changelog/conventional-changelog)
+1. Commit your changes with `npm run commit`
 2. Push to a new branch (e.g. `git push origin my-awesome-feature`)
 3. Create a new Pull Request
 

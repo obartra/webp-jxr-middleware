@@ -4,12 +4,13 @@
   "description": "Express middleware to replace jpg/png/jpeg with webp/jxr when supported",
   "main": "lib/index.js",
   "scripts": {
+    "commit": "git-cz",
     "prepublish": "npm run build",
-    "test": "./node_modules/.bin/babel-node  ./node_modules/.bin/babel-istanbul cover test/*.spec.js | tap-dot",
+    "test": "babel-node  ./node_modules/.bin/babel-istanbul cover test/*.spec.js | tap-dot",
     "test-coveralls": "npm test -- && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "dev": "DEBUG=express:* ./node_modules/.bin/babel-node src/dev",
-    "lint": "./node_modules/.bin/eslint src/*.js test/*.js",
-    "docs": " ./node_modules/.bin/jsdoc --pedantic -c .jsdoc src --readme README.md",
+    "lint": "eslint src/*.js test/*.js",
+    "docs": "jsdoc --pedantic -c .jsdoc src --readme README.md",
     "build": "bash build.sh"
   },
   "commitMsg": {
@@ -66,21 +67,24 @@
     "vary": "^1.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
+    "babel-cli": "^6.18.0",
     "babel-istanbul": "^0.11.0",
-    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-es2015": "^6.18.0",
     "blue-tape": "^1.0.0",
-    "coveralls": "^2.11.12",
-    "cz-conventional-changelog": "^1.1.7",
-    "eslint": "^3.3.0",
+    "commitizen": "^2.8.6",
+    "coveralls": "^2.11.15",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.10.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
     "express": "^4.14.0",
-    "jsdoc": "^3.4.0",
+    "jsdoc": "^3.4.3",
     "precommit": "^1.2.2",
-    "supertest": "^2.0.0",
-    "supertest-as-promised": "^4.0.0",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2",
     "tap-dot": "^1.0.5"
   }
 }
