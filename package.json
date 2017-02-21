@@ -73,7 +73,7 @@
     "blue-tape": "^1.0.0",
     "commitizen": "^2.8.6",
     "coveralls": "^2.11.15",
-    "cz-conventional-changelog": "^1.2.0",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.10.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-config-airbnb-base": "^10.0.1",
